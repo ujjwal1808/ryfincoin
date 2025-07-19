@@ -1514,9 +1514,20 @@ Timestamp: ${Date.now()}`;
                   </div>
                 </div>
               ))}
+              
             </div>
           </div>
+            <br />
+
+          <p className="text-gray-400 mx-auto max-w-6xl text-sm sm:text-base text-center">
+              The next stage of our sale will be hosted on our official exchange platform, <a href=" https://ryfinexchange.com/" className="text-blue-600"> https://ryfinexchange.com/</a>, via our launchpad. Once the exchange is live, you will have the exclusive opportunity to acquire your own piece of happiness by joining the Ryfin Exchange.
+              <br />
+              Don't miss out on this chance to be a part of the future of finance. Join us and secure your Ryfin Coins!
+
+              </p>
         </section>
+
+
 
         {/* Rewards Calculator Section */}
         <section id="rewards" className={`py-12 sm:py-16 md:py-24 px-4 text-center transition-all duration-1000 transform ${visibleSections.includes('rewards') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
