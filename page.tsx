@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Facebook, Twitter, Instagram, Linkedin, Github, Send, Youtube } from 'lucide-react';
 import { Play, Menu, X, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -71,6 +72,15 @@ export default function Page() {
   const [verifyingTwitter, setVerifyingTwitter] = useState(false);
   const [retweetVerified, setRetweetVerified] = useState(false);
   const [verifyingRetweet, setVerifyingRetweet] = useState(false);
+
+  const socialLinks = [
+    { icon: <Twitter className="h-5 w-5" />, href: 'https://x.com/ryfinexchange?t=QsrFYleBs-rMw8SCMVEGXA&s=09', label: 'Twitter' },
+    { icon: <Facebook className="h-5 w-5" />, href: 'https://www.facebook.com/share/1E5v899c4D/', label: 'Facebook' },
+    { icon: <Instagram className="h-5 w-5" />, href: 'https://www.instagram.com/ryfinexchange?igsh=MWZ0bmxieDN6ZGs2dg==', label: 'Instagram' },
+    { icon: <Linkedin className="h-5 w-5" />, href: 'https://www.linkedin.com/company/ryfin-global-exchange-inc/', label: 'LinkedIn' },
+    { icon: <Send className="h-5 w-5" />, href: 'https://t.me/RyfinGlobalEx', label: 'Send' },
+    { icon: <Youtube className="h-5 w-5" />, href: 'https://youtube.com/@ryfinexchange?si=GVegtDyvGGOUuOHd', label: 'Youtube' },
+  ];
 
   const connectTwitter = async () => {
     const width = 600;
@@ -792,6 +802,103 @@ Timestamp: ${Date.now()}`;
           {/* <span className="block h-8 md:h-14"></span> */}
         </div>
 
+
+        {/* About Us */}
+        <section id="feature-2" className={`py-12 sm:py-16 md:py-24 px-4 sm:px-6 transition-all duration-1000 transform ${visibleSections.includes('feature-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+            <div className="space-y-4 sm:space-y-6 order-2 md:order-1 text-left">
+              <h3 className="text-3xl sm:text-4xl font-melodrama">About Us</h3>
+              <span className="text-yellow-500 font-medium uppercase tracking-wider text-sm sm:text-base">Welcome to RyfinCoin – The Heart of Ryfin Global Exchange Inc.</span>
+              <div className="text-gray-400 leading-relaxed text-sm sm:text-base">
+                <ul className="inline-block text-justify">
+                  <li>At Ryfin Global Exchange Inc., we are pioneering the future of cryptocurrency trading with innovation, security, and user empowerment at our core. As a premier platform supporting major cryptocurrencies like Bitcoin, Ethereum, XRP, and more, we’re committed to delivering a seamless and rewarding digital asset experience for users worldwide.</li>
+                  <br />
+                  <li>RyfinCoin (RYF) is the utility token powering our ecosystem — and it's designed to give you real value, not just speculative hype.</li>
+                  <br />
+                  <li>Whether you're a beginner exploring crypto or an experienced trader looking for more benefits, RyfinCoin unlocks a world of possibilities. Use RYF to trade and buy other cryptocurrencies, stake for rewards, and access exclusive features on the Ryfin Global Exchange platform.</li>
+                </ul>
+              </div>
+
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="relative mx-auto max-w-[400px] md:max-w-none">
+                <div className="absolute inset-[-50%] w-[140%] h-[200%] bg-[url('/assets/sparkling.svg')] bg-no-repeat bg-cover bg-center opacity-40"></div>
+                <Image
+                  src="/assets/ryfin-logo.png"
+                  alt="NFT Coin"
+                  width={500}
+                  height={400}
+                  className="rounded-xl relative z-10 w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* why choose us? */}
+        <section id="feature-2" className={`py-12 pb-24 px-4 sm:px-6 transition-all duration-1000 transform ${visibleSections.includes('feature-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="grid md:grid-cols-1 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
+            <div className="space-y-4 sm:space-y-6 order-2 md:order-1 text-left ">
+              <h3 className="text-3xl sm:text-4xl font-melodrama text-center">Why RyfinCoin?</h3>
+              {/* <span className="text-yellow-500 font-medium uppercase tracking-wider text-sm sm:text-base">Welcome to RyfinCoin – The Heart of Ryfin Global Exchange Inc.</span> */}
+
+              <div className="border border-red-600 bg-red-600/10 rounded-lg p-5  ">
+                <p className="text-white opacity-90 text-sm sm:text-base"><strong >✔ Trade More, Spend Less:</strong><br />Use RyfinCoin to buy and trade top cryptocurrencies at lower fees.</p>
+              </div>
+
+              <div className="border border-yellow-400 bg-yellow-400/10 rounded-lg p-5  ">
+                <p className="text-white opacity-90 text-sm sm:text-base"><strong >✔ Earn While You Hold:</strong><br />Stake your RYF tokens and earn attractive staking rewards over time.</p>
+              </div>
+
+              <div className="border border-purple-500 bg-purple-500/10 rounded-lg p-5  ">
+                <p className="text-white opacity-90 text-sm sm:text-base"><strong >✔ Powerful Utility:</strong><br />RyfinCoin is more than a token — it's your gateway to premium tools, faster transactions, and member-only benefits on the Ryfin platform.</p>
+              </div>
+
+              <div className="border border-blue-400 bg-blue-400/10 rounded-lg p-5  ">
+                <p className="text-white opacity-90 text-sm sm:text-base"><strong >✔ Secure & Scalable Ecosystem:</strong> <br />Built on robust blockchain infrastructure, RyfinCoin is integrated into a secure and scalable trading environment designed to meet the needs of global users.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* our registration */}
+
+        <section id="presale" className={`py-12 md:py-24 relative overflow-hidden transition-all duration-1000 transform ${visibleSections.includes('presale') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Background watermarks */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Ethereum diamond watermark */}
+            <div className="absolute inset-0 w-full h-full opacity-20">
+              <div className="w-[150%] h-[150%] absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 bg-[url('/assets/ethereum-diamond.svg')] bg-no-repeat bg-contain bg-center"></div>
+            </div>
+          </div>
+
+          <div className="text-center mb-8 md:mb-12 relative z-10 px-4">
+            <h2 className="text-3xl md:text-4xl font-melodrama mb-4">Our Registration</h2>
+            <div className="mx-auto max-w-4xl">
+            <p className="text-gray-400  text-sm sm:text-base">
+              Ryfin Global Exchange Inc. is officially registered in Panama as a legal entity (Persona Jurídica). This solidifies our commitment to operating with full regulatory compliance and global business standards.
+              </p>
+              <p className="text-yellow-500 font-medium uppercase tracking-wider text-justify mt-8 mb-3">Key Corporate Information:</p>
+              <ul className="list-disc list-inside text-gray-400 text-sm sm:text-base text-justify">
+                <li>Legal Name: Ryfin Global Exchange Inc.</li>
+                <li>Jurisdiction: Panama</li>
+                <li>Date of Incorporation: January 17, 2025</li>
+                <li>Official Registry:  Panama Public Registry – Panadata</li>
+              </ul>
+              <p className="text-gray-400 mx-auto max-w-4xl text-sm sm:text-base mt-3 text-justify">Our transparent legal foundation strengthens trust, provides peace of mind, and ensures that Ryfin Global Exchange Inc. operates securely within a recognized international framework.</p>
+            
+            </div>
+            <div className="border border-yellow-400 bg-yellow-400/10 rounded-lg p-5 text-justify mx-auto max-w-5xl mt-8">
+              <p className="text-white opacity-90 text-sm sm:text-base"><strong >Join the Ryfin Revolution:</strong> <br />With RyfinCoin and Ryfin Global Exchange, you're not just trading crypto — you're investing in a future where your token works for you. <br /> <strong>Explore. Trade. Stake. Grow — with Ryfin.</strong></p> 
+            </div>
+
+
+          </div>
+
+
+        </section>
+
         {/* Feature Section 1 */}
         <section id="feature-1" style={{ marginBottom: '30px' }} className={`py-6 sm:py-6 md:py-6 px-4 sm:px-6 transition-all duration-1000 transform ${visibleSections.includes('feature-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <UserDashboard
@@ -1009,7 +1116,7 @@ Timestamp: ${Date.now()}`;
 
                   <div className="w-[200px] bg-gradient-to-r from-[#C89A38] via-[#FCD244] via-[#FCD95A] via-[#FDE47E] via-[#EFE0A3] via-[#FDE47E] via-[#FCD95A] via-[#FCD244] to-[#C89A38] rounded-lg p-3 text-center border border-[#F8C91E]/30">
                     <h3 className="text-base font-semibold mb-1 text-black">Token Type</h3>
-                    <p className="text-lg text-black">Security Token</p>
+                    <p className="text-lg text-black">Utility Token</p>
                   </div>
                 </div>
 
@@ -1471,29 +1578,30 @@ Timestamp: ${Date.now()}`;
 
               {/* Timeline boxes */}
               <div className="relative w-[45%] p-[20px] bg-[rgba(10,12,21,0.8)] border border-[#F8C91E] mb-[40px] ml-auto rounded-tl-[25px] rounded-tr-[25px] rounded-br-[25px] z-10">
-                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">April</h3>
-                <p className="text-[#ccc] mb-[5px] text-[14px]">Platform launch and Initial Coin Offering (ICO)</p>
+                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">August</h3>
+                <p className="text-[#ccc] mb-[5px] text-[14px]">Launch with p2p and Launchpad and stacking</p>
                 {/* <p className="text-[#ccc] mb-[5px] text-[14px]">Perform initial research and feasibility assessments.</p>
                 <p className="text-[#ccc] mb-[5px] text-[14px]">Create a project plan outlining scope, timeline, resources, and budget.</p> */}
               </div>
 
               <div className="relative w-[45%] p-[20px] bg-[rgba(10,12,21,0.8)] border border-[#F8C91E] mb-[40px] mr-auto rounded-tl-[25px] rounded-tr-[25px] rounded-bl-[25px] z-10">
-                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">July</h3>
-                <p className="text-[#ccc] mb-[5px] text-[14px]">Beta launch of Ryfin Global Exchange</p>
+                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">October</h3>
+                <p className="text-[#ccc] mb-[5px] text-[14px]">Beta launch of ryfin global exchange</p>
                 {/* <p className="text-[#ccc] mb-[5px] text-[14px]">Perform initial research and feasibility assessments.</p>
                 <p className="text-[#ccc] mb-[5px] text-[14px]">Create a project plan outlining scope, timeline, resources, and budget.</p> */}
               </div>
 
               <div className="relative w-[45%] p-[20px] bg-[rgba(10,12,21,0.8)] border border-[#F8C91E] mb-[40px] ml-auto rounded-tl-[25px] rounded-tr-[25px] rounded-br-[25px] z-10">
-                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">September</h3>
-                <p className="text-[#ccc] mb-[5px] text-[14px]">Completion of Ethereum Layer 2 blockchain development</p>
+                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">December</h3>
+                <p className="text-[#ccc] mb-[5px] text-[14px]">Decentralized Exchange (DEX) launch</p>
+                {/* <p className="text-[#ccc] mb-[5px] text-[14px]">Completion of Ethereum Layer 2 blockchain development</p> */}
                 {/* <p className="text-[#ccc] mb-[5px] text-[14px]">Perform initial research and feasibility assessments.</p>
                 <p className="text-[#ccc] mb-[5px] text-[14px]">Create a project plan outlining scope, timeline, resources, and budget.</p> */}
               </div>
 
               <div className="relative w-[45%] p-[20px] bg-[rgba(10,12,21,0.8)] border border-[#F8C91E] mb-[40px] mr-auto rounded-tl-[25px] rounded-tr-[25px] rounded-bl-[25px] z-10">
-                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">December</h3>
-                <p className="text-[#ccc] mb-[5px] text-[14px]">Decentralized Exchange (DEX) launch</p>
+                <h3 className="text-[#F8C91E] mb-[10px] text-[20px]">Feburary</h3>
+                <p className="text-[#ccc] mb-[5px] text-[14px]"> Web 3 and DAP Applications</p>
                 {/* <p className="text-[#ccc] mb-[5px] text-[14px]">Perform initial research and feasibility assessments.</p>
                 <p className="text-[#ccc] mb-[5px] text-[14px]">Create a project plan outlining scope, timeline, resources, and budget.</p> */}
               </div>
@@ -1600,25 +1708,18 @@ Timestamp: ${Date.now()}`;
               <p className="text-gray-400 text-sm">
                 Ryfin Coin (RYFN) is more than just a cryptocurrency—it's the foundation of a secure, transparent, and innovative financial ecosystem. Built on Ethereum, Ryfin Coin offers a seamless, user-friendly, and rewarding experience for investors, traders, and crypto enthusiasts.
               </p>
+              {/* w-9 h-9 bg-white rounded-full flex items-center justify-center hover:bg-gradient-to-b hover:from-[#F8C91E]/10 hover:via-[#F8C91E]/10 hover:to-[#F0A730]/10 */}
               <div className="flex gap-4">
-                {["Facebook", "YouTube"].map((social) => (
-                  <a
-                    key={social}
-                    href={
-                      social === "Facebook" ? "https://www.instagram.com/ryfincoin" :
-                        "https://t.me/ryfinexchange"
-                    }
-                    className="w-9 h-9 bg-white rounded-full flex items-center justify-center hover:bg-gradient-to-b hover:from-[#F8C91E]/10 hover:via-[#F8C91E]/10 hover:to-[#F0A730]/10"
-                  >
-                    <Image
-                      src={`/assets/${social.toLowerCase()}.svg`}
-                      alt={social}
-                      width={social === "Facebook" ? 12 : 20}
-                      height={social === "Facebook" ? 12 : 20}
-                    />
-                    <span className="sr-only">{social}</span>
-                  </a>
-                ))}
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="text-gray-400 hover:text-gold-500 transition-colors duration-200"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
+              ))}
               </div>
             </div>
 
